@@ -1,11 +1,11 @@
-# foosball-ranking
+# Foosball-Ranking
 
 Foosball ranking system that allows user to:
 - Record match results including winners and participants
 - Check the graphical view for overall win loss rate of a participant
 - Check the graphical view for win loss rate of a participant against another specific participant
 
-## Demo application
+### Demo application
 http://foodball-env.j.layershift.co.uk
 
 ### Technology stack
@@ -17,7 +17,7 @@ http://foodball-env.j.layershift.co.uk
 6. AngularJS 1.5
 7. Chart.js
 
-## Setup instructions:
+### Setup instructions:
 - You need to have PostgresSql up and running. Update application.properties with DB configuration
 - Import this into your IDE, start up Application.java 
 - Access it using: 
