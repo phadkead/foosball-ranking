@@ -1,0 +1,50 @@
+
+
+
+<div layout-gt-sm="row" layout-align="center center"  ng-cloak>
+  <div layout="column" layout-align="center center">
+    <md-select placeholder="Select Player" ng-model="$ctrl.player" md-on-open="$ctrl.getAllPlayers()" 
+     md-on-close="$ctrl.setWinLossChartData($ctrl.player)"
+    md-selected-text="{{player.name}}"
+    style="min-width: 150px;">
+      <md-option ng-value="player" ng-repeat="player in $ctrl.players track by $index">{{player.name}}</md-option>
+    </md-select>
+    
+    <!--  <md-input-container>
+        <label>Players</label>
+        <md-select placeholder="Select Player" ng-model="$ctrl.player" md-selected-text="{{player.name}}"  md-on-open="$ctrl.getAllPlayers()" 
+          md-on-close="$ctrl.setWinLossChartData($ctrl.player)">
+            <md-option ng-value="player" ng-repeat="player in $ctrl.players track by $index">{{player.name}}</md-option>
+        </md-select>
+      </md-input-container> -->
+   <!--  <p class="md-caption">You have selected: {{ $ctrl.player.name ? $ctrl.player.name: 'No one yet' }}</p> -->
+  </div>
+</div>
+
+
+<div layout="row" layout-align="center center" ng-if="$ctrl.player.name">
+  <!-- <div flex-gt-sm="50" flex> -->
+    <md-content>
+      <md-list >
+      <h2>
+        <md-subheader class="md-primary">Here is stastics for {{$ctrl.player.name}} </md-subheader>
+       </h2> 
+        <md-list-item class="md-2-line" ng-value="$ctrl.player">
+          <div class="md-list-item-text" layout="column">
+            <p>Total Matches Played: {{$ctrl.player.totalMatches}} </p>
+            <p>Winning Ratio: {{$ctrl.data[0]}} </p>
+            <p>Loss Ratio: {{$ctrl.data[1]}} </p>
+          </div>
+        </md-list-item>
+      </md-list>
+    </md-content>
+  <!-- </div> -->
+</div>
+
+<div layout-gt-sm="row" layout-align="center center"  style="padding:40px" ng-if="$ctrl.player.name">
+  <div flex-gt-sm="50" flex>
+   	<canvas id="base" class="chart chart-doughnut" chart-colors="$ctrl.colors"
+  				chart-data="$ctrl.data" chart-labels="$ctrl.labels" >
+		</canvas> 
+  </div>
+</div>

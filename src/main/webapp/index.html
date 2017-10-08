@@ -1,0 +1,45 @@
+<html >
+<head>
+	<!-- <base href="/">
+	<script src="//code.angularjs.org/snapshot/angular.min.js"></script> -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<!-- AngularJS Material Dependencies -->
+	<!-- style sheet -->
+<link rel="stylesheet" href="http://rawgit.com/daniel-nagy/md-data-table/master/dist/md-data-table.css">
+<!-- module -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-aria.min.js"></script>
+	<!-- AngularJS Material Javascript now available via Google CDN; version 1.1.4 used here -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.js"></script>
+	<script src="https://unpkg.com/@angular/router@0.2.0/angular1/angular_1_router.js"></script>
+	<script src="http://rawgit.com/daniel-nagy/md-data-table/master/dist/md-data-table.js"></script>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+<script src="//cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+	
+	<script src="app/services/playerService.js"></script>
+	<script src="app/controllers/resultsRecorderController.js"></script>
+	<script src="app/controllers/playerLoaderController.js"></script>
+	
+	
+	<script src = "app.js"></script>
+	<script type="text/javascript">
+		angular.element(document.getElementsByTagName('head')).
+			append(angular.element('<base href="' + window.location.pathname + '" />'));
+	</script>
+</head>
+<body ng-app="app">
+	<div layout="row" layout-align="center center">
+	<md-toolbar class="md-tall md-blue">
+      <h1 class="md-display-2" layout-align="center center" layout-margin>
+        <span> Foosball Ranking System</span>
+      </h1>
+    </md-toolbar>
+    </div>
+  	<app></app>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<div layout-gt-sm="row" layout-align="center center"  ng-cloak>
+  <div layout="column" layout-align="center center">
+    <md-select placeholder="Select Player 1" ng-model="$ctrl.selected[0]" md-on-open="$ctrl.getAllPlayers()" 
+     md-selected-text="{{player1.name}}"
+    style="min-width: 150px;">
+       <md-option ng-value="player1" ng-repeat="player1 in $ctrl.players track by $index">{{player1.name}}</md-option>
+  </div>
+
+  <div layout="column" layout-align="center center">
+    <md-select placeholder="Select Player 2" ng-model="$ctrl.selected[1]" md-on-open="$ctrl.getAllPlayers()" 
+     md-selected-text="{{player2.name}}"
+    style="min-width: 150px;">
+       <md-option ng-value="player2" ng-repeat="player2 in $ctrl.players track by $index">{{player2.name}}</md-option>
+  </div>
+  
+ <!--  <p class="md-caption">You have selected Head2Head : 
+  	{{ $ctrl.selected[0] ? $ctrl.selected[0].name: 'No one yet' }} VS
+  	{{ $ctrl.selected[1] ? $ctrl.selected[1].name: 'No one yet' }}
+  </p>  -->
+  <div layout="row" layout-align="center center">
+  <md-button class="md-raised md-primary" ng-click="$ctrl.findHead2Head($ctrl.selected)">Head2Head</md-button>
+  </div>
+</div>
+
+<div layout="row" layout-align="center center" ng-if="$ctrl.head2Head">
+  <div >
+    <b><h1 style="color:#472b93;">{{$ctrl.head2Head[0].name}}</h1></b>
+    <b><h3 style="color:#472b93;">{{$ctrl.head2Head[0].wonMatches}}</h3></b>
+    <b><h3 style="color:#472b93;">{{$ctrl.head2Head[0].percentageWin}}% Wins</h3></b>
+  </div>
+  <div >
+    	<canvas id="base" class="chart chart-doughnut" chart-colors="$ctrl.colors"
+  				chart-data="$ctrl.data" chart-labels="$ctrl.labels" >
+		</canvas> 
+  </div>
+  <div  >
+   <b><h1 style="color:#f47920;">{{$ctrl.head2Head[1].name}}</h1></b>
+    <b><h3 style="color:#f47920;">{{$ctrl.head2Head[1].wonMatches}}</p>
+    <b><h3 style="color:#f47920;">{{$ctrl.head2Head[1].percentageWin}}% Wins</p>
+  </div>
+</div>

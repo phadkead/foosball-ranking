@@ -1,0 +1,82 @@
+.navBardemoBasicUsage md-content .ext-content {
+ 
+  background-color: #FFF2E0; }
+
+.gridListdemoBasicUsage md-grid-list {
+  margin: 8px; }
+.gridListdemoBasicUsage .gray {
+  background: #f5f5f5; }
+.gridListdemoBasicUsage .green {
+  background: #b9f6ca; }
+.gridListdemoBasicUsage .yellow {
+  background: #ffff8d; }
+.gridListdemoBasicUsage .blue {
+  background: #84ffff; }
+.gridListdemoBasicUsage .purple {
+  background: #b388ff; }
+.gridListdemoBasicUsage .red {
+  background: #ff8a80; }
+
+
+md-grid-list {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
+md-grid-tile {
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  width: calc(((33.3333% - 1.33333px) * 1) - 1px) !important;
+  top: auto !important;
+  margin: 10px !important;
+}
+
+figure img {
+   cursor: pointer;
+   height: 90%;
+   width: 90%;
+    -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+} 
+
+igcaption:hover div{
+  opacity: 1;
+  top: 0;
+}
+
+figcaption:hover div:after{
+  width: 50%;
+}
+
+figure:hover img{
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+          transform: scale3d(1.2, 1.2, 1);
+}
+
+.chart-horizontal-bar
+chart-data: series data
+chart-labels: x axis labels
+chart-options (default: {}): Chart.js options
+chart-series (default: []): series labels
+chart-click (optional): onclick event handler
+chart-hover (optional): onmousemove event handler
+chart-colors (default to global colors): colors for the chart
+chart-dataset-override (optional): override datasets individually
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.orange600 { color: #FB8C00; }
+.material-icons.md-dark { 
+  color: rgba(0, 0, 0, 0.54); 
+   cursor: pointer;
+  }
+.material-icons.md-dark.md-inactive { 
+  color: rgba(0, 0, 0, 0.26); 
+   cursor: pointer;
+}

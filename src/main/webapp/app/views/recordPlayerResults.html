@@ -1,0 +1,41 @@
+<div layout="row" layout-margin layout-xs="column"  >
+   
+    <div layout="column" layout-padding>
+        <h1>Team A  <i class="material-icons">people</i></h1> 
+     	<div >
+        	<label>Player 1: </label>
+        	<input ng-model="$ctrl.matchParticipants[0].player" placeholder="name" />
+   		</div>
+   		<div >
+	        <label>Player 2: </label>
+    	    <input ng-model="$ctrl.matchParticipants[1].player" placeholder="name" />
+   		</div>
+    	<div>
+        	<label>Did the team win? </label> 
+         	<md-switch ng-model="$ctrl.matchParticipants[0].winner" 
+          	ng-change="$ctrl.matchParticipants[1].winner = $ctrl.matchParticipants[0].winner "	
+           	aria-label="Did the team win?"></md-switch>
+    	</div>
+    </div>
+   
+    <div layout="column" layout-padding>
+    	<h1>Team B  <i class="material-icons">people</i></h1> 
+    	<div >
+       		 <label>Player 1: </label>
+        	 <input ng-model="$ctrl.matchParticipants[2].player" placeholder="name" />
+        </div>
+        <div >
+        	<label>Player 2: </label>
+        	<input ng-model="$ctrl.matchParticipants[3].player" placeholder="name" />
+        </div>
+        <div >
+        	<label>Did the team win? </label> 
+         	<md-switch ng-model="$ctrl.matchParticipants[2].winner" 
+         	 ng-change="$ctrl.matchParticipants[3].winner = $ctrl.matchParticipants[2].winner"	
+          	 aria-label="Did the team win?"></md-switch>
+         </div>
+	</div>    
+</div>
+ <div flex layout-margin layout-align-gt-lg>
+        <md-button class="md-raised" ng-click="$ctrl.saveMatchParticipants($ctrl.matchParticipants)">Save</md-button>
+ </div>
