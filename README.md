@@ -8,6 +8,8 @@ Foosball ranking system that allows user to:
 ### Demo application
 http://foodball-env.j.layershift.co.uk
 
+![Screenshot gif](Screenshot.gif "Demo of application")
+
 ### Technology stack
 1. Java, Spring Boot
 2. Hibernate
