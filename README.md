@@ -5,11 +5,6 @@ Foosball ranking system that allows user to:
 - Check the graphical view for overall win loss rate of a participant
 - Check the graphical view for win loss rate of a participant against another specific participant
 
-### Demo application
-http://foodball-env.j.layershift.co.uk
-
-![Screenshot gif](Screenshot.gif "Demo of application")
-
 ### Technology stack
 1. Java, Spring Boot
 2. Hibernate
@@ -18,6 +13,11 @@ http://foodball-env.j.layershift.co.uk
 5. Spring REST
 6. AngularJS 1.5
 7. Chart.js
+
+### Demo application
+http://foodball-env.j.layershift.co.uk
+
+![Screenshot gif](Screenshot.gif "Demo of application")
 
 ### Setup instructions:
 - You need to have PostgresSql up and running. Update application.properties with DB configuration
